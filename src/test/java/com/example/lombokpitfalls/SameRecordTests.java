@@ -1,8 +1,8 @@
 package com.example.lombokpitfalls;
 
-import com.example.lombokpitfalls.entities.User;
 import com.example.lombokpitfalls.entities.Comment;
 import com.example.lombokpitfalls.entities.Post;
+import com.example.lombokpitfalls.entities.User;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
@@ -16,7 +16,7 @@ public class SameRecordTests {
     @PersistenceContext
     private EntityManager em;
 
-    @Test()
+    @Test
     void userDetachTest() {
         User user = new User();
         em.persist(user);
@@ -29,7 +29,7 @@ public class SameRecordTests {
         Assertions.assertEquals(firstFetched, secondFetched);
     }
 
-    @Test()
+    @Test
     void postDetachTest() {
         Post post = new Post();
         em.persist(post);
@@ -42,7 +42,7 @@ public class SameRecordTests {
         Assertions.assertEquals(firstFetched, secondFetched);
     }
 
-    @Test()
+    @Test
     void commentDetachTest() {
         Comment comment = new Comment();
         em.persist(comment);

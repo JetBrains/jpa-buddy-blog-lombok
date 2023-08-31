@@ -1,8 +1,8 @@
 package com.example.lombokpitfalls;
 
-import com.example.lombokpitfalls.entities.User;
 import com.example.lombokpitfalls.entities.Comment;
 import com.example.lombokpitfalls.entities.Post;
+import com.example.lombokpitfalls.entities.User;
 import com.example.lombokpitfalls.repositories.UserRepository;
 import com.example.lombokpitfalls.repositories.CommentRepository;
 import com.example.lombokpitfalls.repositories.PostRepository;
@@ -24,7 +24,7 @@ class BrokenMapsTests {
     @Autowired
     private CommentRepository commentRepository;
 
-    @Test()
+    @Test
     void userSetTest() {
         User user = new User();
         Set<User> set = new HashSet<>();
@@ -35,7 +35,7 @@ class BrokenMapsTests {
         Assertions.assertTrue(set.contains(user));
     }
 
-    @Test()
+    @Test
     void postSetTest() {
         Post post = new Post();
         Set<Post> set = new HashSet<>();
@@ -46,7 +46,7 @@ class BrokenMapsTests {
         Assertions.assertTrue(set.contains(post));
     }
 
-    @Test()
+    @Test
     void commentSetTest() {
         Comment comment = new Comment();
         Set<Comment> set = new HashSet<>();
